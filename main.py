@@ -1,3 +1,5 @@
+import telebot
+import random
 
 bot_token = 'YOUR_TELEGRAM_BOT_TOKEN_HERE'
 user_list = ['@User1', '@User2', '@User3', '@User4']
@@ -14,3 +16,4 @@ def handle_winner(message):
     # Send the winner to the user who sent the command
     bot.send_message(message.chat.id, f'The winner is: {winner}')
 
+bot.polling()
